@@ -36,14 +36,13 @@ public:
         char temp[512]; 
 
         // Part 1: Gateway Info
-        // FIX: "interval minutes" (with space) instead of underscore
         int written = snprintf(temp, sizeof(temp), 
             "[\n"
             "  {\n"
             "    \"gatewayId\": \"%s\",\n"
             "    \"date\": \"%s\",\n"
             "    \"deviceType\": \"%s\",\n"
-            "    \"interval minutes\": %d,\n"  
+            "    \"interval minutes\": %d,\n"
             "    \"total_readings\": %d,\n"
             "    \"values\": {\n"
             "      \"device_count\": 1,\n"
@@ -56,7 +55,6 @@ public:
         strcat(buffer, temp);
 
         // Part 2: Device & Reading Data
-        // FIX: "meter datetime" and "total m3" (with space)
         written = snprintf(temp, sizeof(temp), 
             "        {\n"
             "          \"media\": \"%s\",\n"

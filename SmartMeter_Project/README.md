@@ -18,13 +18,25 @@ The project follows a modular structure:
 └── README.md          # Project documentation
 ```
 ## 4. Build and Run Instructions
+```
 Using G++ (Terminal/Command Line)
+```
 Open a terminal in the project folder.
-Compile the code: g++ main.cpp -o app
-Run the application: ./app (or app.exe on Windows)
+```
+Compile the code:
+```
+g++ main.cpp -o app
+```
+Run the application:
+```
+ ./app (or app.exe on Windows)
+ ```
 Using STM32 / Arduino
+```
 Copy JsonSerializer.h into your project's src or include folder.
+```
 Include the header: #include "JsonSerializer.h"
+```
 Call JsonSerializer::serialize(...) in your main loop.
 
 ## 5. Library API Description
@@ -76,6 +88,7 @@ Data Model: C++ structs are used to mimic the data hierarchy (Gateway -> Device 
 ## 8. Possible Extensions
 Multiple Devices: Currently, the struct supports one device per gateway. This can be extended to use std::vector or arrays for multiple devices.
 Checksum: A CRC field could be added to the JSON for data integrity verification during transmission.
+
 
 
 

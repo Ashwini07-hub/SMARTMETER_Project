@@ -57,7 +57,7 @@ The library generates the following exact output structure:
           "deviceId": "stromleser_50898527",
           "unit": "m3",
           "data": [
-            {
+           {
               "timestamp": "2025-01-05 10:00",
               "meter datetime": "2025-01-05 10:00",
               "total m3": 107.752,
@@ -77,4 +77,5 @@ Data Model: C++ structs are used to mimic the data hierarchy (Gateway -> Device 
 
 ## 8. Possible Extensions
 Multiple Devices: Currently, the struct supports one device per gateway. This can be extended to use std::vector or arrays for multiple devices.
+
 Checksum: A CRC field could be added to the JSON for data integrity verification during transmission.

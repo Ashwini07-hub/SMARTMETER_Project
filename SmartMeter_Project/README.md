@@ -38,6 +38,7 @@ Return Value: Returns true if successful, false if the buffer is too small.
 
 ## 6. Example JSON Output
 The library generates the following exact output structure:
+```
 [
   {
     "gatewayId": "gateway_1234",
@@ -74,4 +75,5 @@ Data Model: C++ structs are used to mimic the data hierarchy (Gateway -> Device 
 ## 8. Possible Extensions
 Multiple Devices: Currently, the struct supports one device per gateway. This can be extended to use std::vector or arrays for multiple devices.
 Checksum: A CRC field could be added to the JSON for data integrity verification during transmission.
+
 

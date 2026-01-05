@@ -67,6 +67,7 @@ The library generates the following exact output structure:
     }
   }
 ]
+```
 ## 7. Design Decisions & Assumptions
 No Dynamic Memory: The library uses stack allocation and caller-provided buffers. No malloc or new is used inside the serialization logic to avoid heap fragmentation.
 Safety: snprintf is used strictly to prevent buffer overflows.
@@ -75,5 +76,6 @@ Data Model: C++ structs are used to mimic the data hierarchy (Gateway -> Device 
 ## 8. Possible Extensions
 Multiple Devices: Currently, the struct supports one device per gateway. This can be extended to use std::vector or arrays for multiple devices.
 Checksum: A CRC field could be added to the JSON for data integrity verification during transmission.
+
 
 
